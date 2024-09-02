@@ -38,11 +38,23 @@ def _symlink_addons():
 
 
 def build_sdist(*args, **kwargs):
+    args.update({
+        "odoo_version_override": 17.0
+    })
+    kwargs.update({
+        "odoo_version_override": 17.0
+    })
     with _symlink_addons():
         return build_meta.build_sdist(*args, **kwargs)
 
 
 def build_wheel(*args, **kwargs):
+    args.update({
+        "odoo_version_override": 17.0
+    })
+    kwargs.update({
+        "odoo_version_override": 17.0
+    })
     with _symlink_addons():
         return build_meta.build_wheel(*args, **kwargs)
 
