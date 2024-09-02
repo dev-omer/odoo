@@ -2,3 +2,9 @@
 requires = ["setuptools>=41"]
 build-backend = "pep517_odoo"
 backend-path = ["setup"]
+
+[project]
+version = "17.0"
+
+[tool.hatch-odoo]
+odoo_version_override = "17.0"
