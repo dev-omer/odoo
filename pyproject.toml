@@ -4,7 +4,12 @@ build-backend = "pep517_odoo"
 backend-path = ["setup"]
 
 [project]
+name = "odoo-addons-enterprise"
 version = "17.0"
+readme = "README.md"
+requires-python = ">=3.10"
 
 [tool.hatch-odoo]
+# If our addons have non standard version numbers, let's help hatch-odoo discover the Odoo version.
 odoo_version_override = "17.0"
+# Let's add additional dependencies that are not declared in addons manifests.
